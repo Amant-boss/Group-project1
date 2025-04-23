@@ -16,3 +16,10 @@ if(!(username.value.match(username_regex)) || !(password.value.match(password_re
 }else{
     return true;}
 }
+
+// add listing
+var addListingButton = document.getElementById("add-listing-btn");
+addListingButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("Listing was successfully added");
+});

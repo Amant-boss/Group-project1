@@ -94,3 +94,54 @@ header img{
     display: flex;
     flex-direction: column;
 }
+
+/* add listing */
+.add-listing h1{
+    color: blue;
+  }
+  .add-listing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+  }
+  .add-listing #product-name{
+    padding: 4px 16px;
+    width: 20%;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+  }
+  .add-listing #price{
+    padding: 4px 16px;
+    width: 20%;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+  }
+  .add-listing #description{
+    padding: 4px 16px;
+    width: 20%;
+    height: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+  }
+  .add-listing input[type = submit]{
+    margin: 5px;
+    display: block;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: rgba(255, 100, 0, 0.7);
+    transition: all 0.3s;
+  }
+  .add-listing input[type = submit]:hover{
+    background-color: rgba(255, 100, 0, 0.9);
+    scale: 1.1;
+  }
