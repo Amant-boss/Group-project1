@@ -26,9 +26,3 @@ addListingButton.addEventListener("click", function(event) {
 
 //buy
 
-var bttns = document.getElementsByClassName("btn");
-var cartPrice = 0;
-function addToCart(price){
-    cartPrice = cartPrice + price;
-    console.log(cartPrice);
-}
