@@ -23,3 +23,12 @@ addListingButton.addEventListener("click", function(event) {
     event.preventDefault();
     alert("Listing was successfully added");
 });
+
+//buy
+
+var bttns = document.getElementsByClassName("btn");
+var cartPrice = 0;
+function addToCart(price){
+    cartPrice = cartPrice + price;
+    console.log(cartPrice);
+}
