@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const imageUpload = document.getElementById('image-upload');
-    const imageInput = document.getElementById('product-images');
+    let imageUpload = document.getElementById('image-upload');
+    let imageInput = document.getElementById('product-images');
     
     setupFileUpload(imageUpload, imageInput, 'Images');
 
-    const fileUpload = document.getElementById('file-upload');
-    const fileInput = document.getElementById('product-files');
+    let fileUpload = document.getElementById('file-upload');
+    let fileInput = document.getElementById('product-files');
     
     setupFileUpload(fileUpload, fileInput, 'Files');
 
-    const form = document.getElementById('product-upload-form');
+    let form = document.getElementById('product-upload-form');
     form.addEventListener('submit', handleFormSubmit);
 });
 
@@ -38,14 +38,14 @@ function setupFileUpload(uploadArea, input, type) {
 }
 
 function updateFileList(prefix, files) {
-    const fileNames = Array.from(files).map(file => file.name).join(', ');
+    let fileNames = Array.from(files).map(file => file.name).join(', ');
     alert(prefix + fileNames);
 }
 
 function handleFormSubmit(e) {
     e.preventDefault();
     
-    const productData = {
+    let productData = {
         name: document.getElementById('product-name').value,
         description: document.getElementById('product-description').value,
         price: document.getElementById('product-price').value,
@@ -69,8 +69,8 @@ document.querySelectorAll('.remove-button').forEach(button => {
     });
 });
 
-const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+let hamburger = document.getElementById('hamburger');
+    let navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active'); 

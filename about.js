@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const cartCounter = document.getElementById('cart-counter');
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartCounter = document.getElementById('cart-counter');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartCounter.textContent = cart.length;
 
-    const stats = document.querySelectorAll('.stat-number');
+    let stats = document.querySelectorAll('.stat-number');
     
-    const observer = new IntersectionObserver((entries) => {
+    let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateValue(entry.target);
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     stats.forEach(stat => observer.observe(stat));
 
     function animateValue(element) {
-        const value = parseInt(element.textContent);
+        let value = parseInt(element.textContent);
         let current = 0;
-        const increment = value / 50;
-        const duration = 1500;
-        const stepTime = duration / 50;
+        let increment = value / 50;
+        let duration = 1500;
+        let stepTime = duration / 50;
 
-        const timer = setInterval(() => {
+        let timer = setInterval(() => {
             current += increment;
             if (current >= value) {
                 element.textContent = value + '+';
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+let hamburger = document.getElementById('hamburger');
+    let navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active');

@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartDisplay();
 
     function updateCartDisplay() {
-        const cartContainer = document.getElementById('cart-items');
-        const cartCounter = document.getElementById('cart-counter');
+        let cartContainer = document.getElementById('cart-items');
+        let cartCounter = document.getElementById('cart-counter');
         
         cartCounter.textContent = cart.length;
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         cart.forEach((item, index) => {
             subtotal += item.price * item.quantity;
-            const cartItem = document.createElement('div');
+            let cartItem = document.createElement('div');
             cartItem.className = 'cart-item';
             cartItem.innerHTML = `
                 <img src="${item.image}" alt="${item.name}">
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateSummary(subtotal) {
-        const shipping = subtotal > 0 ? 5.00 : 0;
-        const total = subtotal + shipping;
+        let shipping = subtotal > 0 ? 5.00 : 0;
+        let total = subtotal + shipping;
 
         document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
         document.getElementById('shipping').textContent = `$${shipping.toFixed(2)}`;
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+let hamburger = document.getElementById('hamburger');
+    let navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active'); 

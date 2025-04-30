@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+    let slider = document.querySelector('.slider');
+    let slides = document.querySelectorAll('.slide');
+    let prevBtn = document.querySelector('.prev');
+    let nextBtn = document.querySelector('.next');
     
     let currentSlide = 0;
-    const slideCount = slides.length;
+    let slideCount = slides.length;
 
-    const cartCounter = document.getElementById('cart-counter');
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartCounter = document.getElementById('cart-counter');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartCounter.textContent = cart.length;
 
     function goToSlide(index) {
@@ -44,22 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
         resetInterval();
     });
 
-    const contactForm = document.querySelector('.contact-form');
+    let contactForm = document.querySelector('.contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let subject = document.getElementById('subject').value;
+        let message = document.getElementById('message').value;
 
         alert(`Thank you for your message, ${name}! We'll get back to you soon.`);
         contactForm.reset();
     });
 });
 
-const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+let hamburger = document.getElementById('hamburger');
+    let navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active'); 
