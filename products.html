@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <nav>
+    <<nav>
         <div class="logo">DropShip Pro</div>
-        <div class="hamburger" id="hamburger">
-            &#9776;
+        <button id="burger_icon" onclick="document.getElementById('nav-links').classList.toggle('active');"><img src="burger-bar.png" alt="" height="25px" width="25px"></button>
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="html.html">Home</a></li>
@@ -22,6 +21,7 @@
             <li><a href="cart.html">Cart (<span id="cart-counter">0</span>)</a></li>
         </ul>
     </nav>
+
 
     <header id="products">
         <h1>Our Products</h1>

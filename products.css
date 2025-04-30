@@ -10,39 +10,26 @@ nav {
     z-index: 1000;
 }
 
-.hamburger {
-    display: none; /* Hide hamburger by default */
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
+#burger_icon{
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-blue);
+    border: none;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline; /* Ensure items are inline */
-}
-
-.nav-links li a {
-    color: var(--white);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+#burger_icon:hover{
+    width: 25px;
+    height: 25px;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 10%;
     transition: 0.3s;
 }
 
-.nav-links li a:hover {
-    background-color: var(--dark-blue);
-    border-radius: 4px;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
-        display: block; /* Hide links by default on mobile */
+        display: none; /* Hide links by default on mobile */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Position links absolutely */
         top: 60px; /* Position below the navbar */
@@ -56,4 +43,7 @@ nav {
         display: flex; /* Show links when active */
     }
 
+    #burger_icon {
+        display: block; /* Show hamburger on mobile */
+    }
 }

@@ -152,20 +152,40 @@ footer {
     padding: 1rem;
 }
 
+#burger_icon{
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-blue);
+    border: none;
+}
+
+#burger_icon:hover{
+    width: 25px;
+    height: 25px;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 10%;
+    transition: 0.3s;
+}
+
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        right: 0;
+        background-color: var(--primary-blue);
+        padding: 1rem 0; /* Add padding */
     }
-    
-    section {
-        padding: 4rem 1rem;
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
     }
-    
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    header h1 {
-        font-size: 2rem;
+
+    #burger_icon {
+        display: block; /* Show hamburger on mobile */
     }
 }
