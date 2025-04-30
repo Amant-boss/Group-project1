@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get cart from localStorage or initialize empty cart
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     updateCartDisplay();
 
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const cartContainer = document.getElementById('cart-items');
         const cartCounter = document.getElementById('cart-counter');
         
-        // Update cart counter
         cartCounter.textContent = cart.length;
 
         if (cart.length === 0) {
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cartContainer.appendChild(cartItem);
         });
 
-        // Save total to localStorage
         localStorage.setItem('cartTotal', subtotal);
         updateSummary(subtotal);
     }
@@ -54,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('total').textContent = `$${total.toFixed(2)}`;
     }
 
-    // Make these functions global so they can be accessed by inline onclick handlers
     window.removeItem = function(index) {
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -67,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartDisplay();
     };
 
-    // Checkout button functionality
     document.querySelector('.checkout-btn').addEventListener('click', function() {
         if (cart.length > 0) {
             alert('Thank you for your purchase!');
@@ -85,5 +80,5 @@ const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active'); // Toggle the active class
+        navLinks.classList.toggle('active'); 
     });

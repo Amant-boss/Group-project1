@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle image upload area
     const imageUpload = document.getElementById('image-upload');
     const imageInput = document.getElementById('product-images');
     
     setupFileUpload(imageUpload, imageInput, 'Images');
 
-    // Handle file upload area
     const fileUpload = document.getElementById('file-upload');
     const fileInput = document.getElementById('product-files');
     
     setupFileUpload(fileUpload, fileInput, 'Files');
 
-    // Handle form submission
     const form = document.getElementById('product-upload-form');
     form.addEventListener('submit', handleFormSubmit);
 });
@@ -48,7 +45,6 @@ function updateFileList(prefix, files) {
 function handleFormSubmit(e) {
     e.preventDefault();
     
-    // Get form values
     const productData = {
         name: document.getElementById('product-name').value,
         description: document.getElementById('product-description').value,
@@ -58,17 +54,13 @@ function handleFormSubmit(e) {
         files: document.getElementById('product-files').files
     };
 
-    // Here you would typically send the data to your server
     console.log('Product Data:', productData);
     
-    // Show success message
     alert('Product listed successfully!');
     
-    // Reset form
     e.target.reset();
 }
 
-// Add product management functionality
 document.querySelectorAll('.remove-button').forEach(button => {
     button.addEventListener('click', function() {
         if (confirm('Are you sure you want to remove this product?')) {
@@ -81,5 +73,5 @@ const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active'); // Toggle the active class
+        navLinks.classList.toggle('active'); 
     });

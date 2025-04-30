@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Update cart counter from localStorage
     const cartCounter = document.getElementById('cart-counter');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartCounter.textContent = cart.length;
 
-    // Animate stats when they come into view
     const stats = document.querySelectorAll('.stat-number');
     
     const observer = new IntersectionObserver((entries) => {
@@ -40,5 +38,5 @@ const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active'); // Toggle the active class
+        navLinks.classList.toggle('active');
     });
