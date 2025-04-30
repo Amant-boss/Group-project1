@@ -5,7 +5,9 @@
     --light-orange: #ff8a65;
     --white: #ffffff;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -76,6 +78,7 @@ header {
     cursor: pointer;
     margin-top: 2rem;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .cta-button:hover {
