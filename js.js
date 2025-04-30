@@ -37,12 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const getStartedButton = document.querySelector('header .cta-button');
-    getStartedButton.addEventListener('click', function() {
-        document.querySelector('#anchor').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
 
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
