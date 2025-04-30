@@ -54,14 +54,14 @@ nav {
 }
 
 #hamburger_icon {
-    display: none; /* Hide hamburger by default */
+    display: none;
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
 }
 
 .dashboard-header {
-    margin-top: 60px; /* Space for fixed navbar */
+    margin-top: 60px; 
     text-align: center;
     padding: 2rem;
 }
@@ -153,21 +153,21 @@ footer {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide links by default on mobile */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position links absolutely */
-        top: 60px; /* Position below the navbar */
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
         left: 0;
         right: 0;
         background-color: var(--primary-blue);
-        padding: 1rem 0; /* Add padding */
+        padding: 1rem 0;
     }
 
     .nav-links.active {
-        display: flex; /* Show links when active */
+        display: flex; 
     }
 
     #burger_icon {
-        display: block; /* Show hamburger on mobile */
+        display: block; 
     }
 }

@@ -10,7 +10,6 @@
     margin-bottom: 2rem;
 }
 
-/* Story Section */
 .story-section {
     padding: 4rem 0;
 }
@@ -59,7 +58,7 @@
     font-weight: 500;
 }
 
-/* Mission Section */
+
 .mission-section {
     padding: 4rem 0;
     background-color: #f5f5f5;
@@ -96,7 +95,7 @@
     margin-bottom: 1rem;
 }
 
-/* Team Section */
+
 .team-section {
     padding: 4rem 0;
 }
@@ -137,7 +136,7 @@
     font-weight: 500;
 }
 
-/* Values Section */
+
 .values-section {
     padding: 4rem 0;
     background-color: #f5f5f5;
@@ -187,7 +186,7 @@ nav {
 }
 
 .hamburger {
-    display: none; /* Hide hamburger by default */
+    display: none; 
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
@@ -199,7 +198,7 @@ nav {
 }
 
 .nav-links li {
-    display: inline; /* Ensure items are inline */
+    display: inline; 
 }
 
 .nav-links li a {
@@ -215,25 +214,25 @@ nav {
     border-radius: 4px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .nav-links {
-        display: block; /* Hide links by default on mobile */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position links absolutely */
-        top: 60px; /* Position below the navbar */
+        display: block; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
         left: 0;
         right: 0;
         background-color: var(--primary-blue);
-        padding: 1rem 0; /* Add padding */
+        padding: 1rem 0; 
     }
 
     .nav-links.active {
-        display: flex; /* Show links when active */
+        display: flex; 
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .values-grid {
         grid-template-columns: repeat(2, 1fr);

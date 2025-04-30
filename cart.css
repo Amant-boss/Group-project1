@@ -130,21 +130,21 @@ nav {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide links by default on mobile */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position links absolutely */
-        top: 60px; /* Position below the navbar */
+        display: none; 
+        flex-direction: column;
+        position: absolute; 
+        top: 60px; 
         left: 0;
         right: 0;
         background-color: var(--primary-blue);
-        padding: 1rem 0; /* Add padding */
+        padding: 1rem 0; 
     }
 
     .nav-links.active {
-        display: flex; /* Show links when active */
+        display: flex; 
     }
 
     #burger_icon {
-        display: block; /* Show hamburger on mobile */
+        display: block; 
     }
 }
