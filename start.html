@@ -1,80 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="images/favicon_io/favicon-32x32.png" type="image/x-icon">
-        <title>BAD Dropshipping</title>
-        <style>
-            .start{
-                font-family: Arial, sans-serif;
-                background-color: #f0f4f8;
-                background-image: none;
-                color: #333;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: 3%;
-            }
-            .buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-            .start a{
-                display: block;
-                padding: 15px;
-                border: none;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                font-size: 16px;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-            }
-            .buy-bttn, .sell-bttn {
-                background-color: rgba(0,50,220,0.6);
-                transition: 0.2s ease-in;
-            }
-            .new-bttn {
-                background-color: rgba(255, 100, 0, 0.7);
-            }
-            .buy-bttn:hover, .sell-bttn:hover {
-                background-color: rgba(0,50,220,0.8);
-            }
-            .new-bttn:hover{
-                background-color: rgba(255, 100, 0, 0.9);
-            }
-            .start img{
-                align-self: flex-start;
-                justify-self: flex-start;
-            }
-            .options p{
-                font-size: 20px;
-                color: darkorange;
-                font-weight: bold;
-            }
-            .options .scroll{
-                margin-top: 50px;
-                font-size: 10px;
-                color: #333;
-                font-weight: lighter;
-            }
-        </style>
-    </head>
-    <body class="start">
-        <div class="start">
-            <div class="options">
-                <img src="logo blue and orange.png" alt="BAD Dropshipping logo" width="100%">
-                <div class="buttons">
-                    <a href="index.html" class="buy-bttn">Buy</a>
-                    <a href="sell.html" class="sell-bttn">Sell</a>
-                    <a href="register.html" class="new-bttn">Register</a>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
             </div>
-        </div>
-    </body>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="start.js"></script>
+</body>
 </html>
